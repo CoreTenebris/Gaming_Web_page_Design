@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+  }
+  
+body {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 100vh;
+    
+  }
+
+.slider-container{
+    position:relative;
+    overflow:hidden;
+    width:100vw;
+    height:100vh;
+}
+
+
+.left-slide{
+    height:100%;
+    width:35%;
+    position:absolute;
+    top:0;
+    left:0;
+    transition:transform 0.8s;
+}
+
+.left-slide  div{
+    height:100%;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    color:#fff;
+    text-align: center;
+}
+
+.left-slide p{
+    padding:12px;
+    padding-right:50px;
+    
+}
+
+.left-slide h1{
+    font-size:40px;
+    margin-bottom: 45px;
+}
+
+.right-slide{
+    height:100%;
+    position: absolute;
+    top:0;
+    left:35%;
+    width:65%;
+    transition:transform 0.8s;
+}
+
+.right-slide div{
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position:center center; 
+    height:100%;
+    width:100%;
+    
+}
+
+
+button{
+    background-color: rgb(245, 239, 165);
+    border:none;
+    color:rgb(10, 10, 10);
+    cursor:pointer;
+    font-size:15px;
+    padding:15px;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+button:hover{
+    background-color: rgb(250, 195, 112);
+    opacity:1;
+    font-size:16px;
+}
+
+
+
+.slider-container .action-buttons button{
+    position:absolute;
+    left:35%;
+    top:50%;
+    z-index:100;
+
+}
+
+
+
+.slider-container .action-buttons .down-button{
+    transform:translateX(-100%);
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+    
+}
+
+.slider-container .action-buttons .up-button{
+    transform:translateY(-100%);
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+}
